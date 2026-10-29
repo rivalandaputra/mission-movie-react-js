@@ -1,0 +1,54 @@
+/* ========================================
+   1. RESET CSS
+   Mengatur ulang margin, padding, dan ukuran elemen.
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   2. PENGATURAN HTML
+   Mengaktifkan scroll yang halus pada halaman.
+======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ========================================
+   3. PENGATURAN BODY
+   Mengatur font, warna latar belakang, dan warna teks.
+======================================== */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #181a1c;
+  color: #ffffff;
+}
+
+
+/* ========================================
+   4. PENGATURAN GAMBAR
+   Membatasi lebar gambar dan mengaturnya sebagai block.
+======================================== */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* ========================================
+   5. PENGATURAN BUTTON DAN INPUT
+   Menyamakan font dengan font yang digunakan elemen induk.
+======================================== */
+
+button,
+input {
+  font: inherit;
+}

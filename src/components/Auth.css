@@ -1,0 +1,288 @@
+/* ========================================
+   1. HALAMAN LOGIN DAN REGISTER
+   Mengatur posisi halaman dan background.
+======================================== */
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  padding: 30px 16px;
+  box-sizing: border-box;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Background khusus halaman Login */
+.login-page {
+  background-image: url('../assets/background-login.jpg');
+}
+
+/* Background khusus halaman Register */
+.register-page {
+  background-image: url('../assets/background-register.jpg');
+}
+
+
+/* ========================================
+   2. CARD FORM
+   Mengatur kotak utama form Login/Register.
+======================================== */
+
+.auth-card {
+  width: 100%;
+  max-width: 500px;
+  min-width: 0;
+  padding: 36px 44px;
+  box-sizing: border-box;
+
+  border-radius: 12px;
+  background: rgba(24, 26, 28, 0.94);
+  color: #ffffff;
+}
+
+
+/* ========================================
+   3. LOGO
+   Mengatur posisi dan ukuran logo.
+======================================== */
+
+.auth-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 16px;
+}
+
+.auth-logo img {
+  display: block;
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* ========================================
+   4. JUDUL DAN DESKRIPSI
+   Mengatur judul serta teks penjelasan form.
+======================================== */
+
+.auth-card h1 {
+  margin: 0 0 6px;
+  text-align: center;
+  font-size: 36px;
+}
+
+.auth-subtitle {
+  margin: 0 0 28px;
+  text-align: center;
+
+  color: #c0c0c0;
+  font-size: 16px;
+}
+
+
+/* ========================================
+   5. INPUT FORM
+   Mengatur label, kolom input, dan fokus input.
+======================================== */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 16px;
+}
+
+.form-group input {
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 18px;
+  box-sizing: border-box;
+
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+
+  background: #ffffff;
+  color: #222222;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+/* Memberikan tanda visual ketika input dipilih */
+.form-group input:focus {
+  outline: 2px solid #3653ff;
+  outline-offset: 1px;
+  border-color: #3653ff;
+}
+
+/* Indikator fokus tombol untuk navigasi keyboard */
+.auth-button:focus-visible,
+.google-button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* Tampilan tombol ketika nonaktif */
+.auth-button:disabled,
+.google-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* ========================================
+   6. LINK LOGIN DAN REGISTER
+   Mengatur posisi dan tampilan link.
+======================================== */
+
+.auth-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.auth-links a {
+  color: #3653ff;
+  text-decoration: none;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* ========================================
+   7. TOMBOL FORM
+   Mengatur tombol utama dan tombol Google.
+======================================== */
+
+.auth-button,
+.google-button {
+  width: 100%;
+  min-height: 56px;
+
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Tombol utama Login/Register */
+.auth-button {
+  border: none;
+  background: #3653ff;
+  color: #ffffff;
+}
+
+.auth-button:hover {
+  background: #2945e8;
+}
+
+/* Tombol alternatif Google */
+.google-button {
+  border: 1px solid #777777;
+  background: transparent;
+  color: #ffffff;
+}
+
+.google-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* ========================================
+   8. PEMISAH FORM
+   Membuat garis pemisah di sekitar teks "atau".
+======================================== */
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin: 26px 0;
+  color: #999999;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #555555;
+}
+
+
+/* ========================================
+   9. RESPONSIVE MOBILE
+   Menyesuaikan ukuran form pada layar HP.
+======================================== */
+
+@media (max-width: 600px) {
+  /* Mengurangi jarak tepi halaman */
+  .auth-page {
+    padding: 20px 16px;
+  }
+
+  /* Menyesuaikan ukuran card */
+  .auth-card {
+    max-width: 100%;
+    padding: 28px 22px;
+  }
+
+  /* Mengecilkan judul */
+  .auth-card h1 {
+    font-size: 30px;
+  }
+
+  /* Mengecilkan logo */
+  .auth-logo img {
+    width: 90px;
+  }
+
+  /* Mengatur jarak antarkolom input */
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-group input {
+    min-height: 50px;
+    padding: 13px 15px;
+  }
+
+  /* Mengecilkan teks link */
+  .auth-links {
+    font-size: 13px;
+  }
+
+  /* Menyesuaikan tinggi tombol */
+  .auth-button,
+  .google-button {
+    min-height: 48px;
+  }
+
+  /* Mengurangi jarak pemisah */
+  .auth-divider {
+    margin: 24px 0;
+  }
+
+  /* Mengurangi jarak deskripsi */
+  .auth-subtitle {
+    margin-bottom: 24px;
+  }
+}

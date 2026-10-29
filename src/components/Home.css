@@ -1,0 +1,1043 @@
+ /* =========================================
+   1. NAVBAR
+   Mengatur posisi navbar, logo, dan menu.
+  ========================================= */
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    padding: 12px 5%;
+    background-color: #141414;
+  }
+
+  .navbar-logo {
+    flex-shrink: 0;
+
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  /* Menu navigasi desktop */
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+  }
+
+  /* Link navigasi */
+  .navbar-menu a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .navbar-menu a:hover {
+    color: #bcbcbc;
+  }
+
+  /* Tombol pencarian dan menu */
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  /* Tombol menu hanya muncul di mobile */
+  .menu-button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+    background-color: #292929;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  /* =========================================
+   2. TOMBOL SEARCH DAN INPUT PENCARIAN
+   Mengatur tombol pencarian dan kolom input.
+  ========================================= */
+
+  .search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .search-input {
+    position: absolute;
+    top: 70px;
+    right: 5%;
+    z-index: 1001;
+
+    width: 250px;
+    max-width: calc(100% - 32px);
+    padding: 12px 15px;
+    box-sizing: border-box;
+
+    border: 1px solid #555;
+    border-radius: 8px;
+
+    background-color: #222;
+    color: white;
+    font-size: 14px;
+    outline: none;
+  }
+
+  .search-input::placeholder {
+    color: #aaa;
+  }
+
+  /* =========================================
+   3. TOMBOL LOGOUT
+   Mengatur tampilan dan efek hover logout.
+  ========================================= */
+
+  .logout-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 14px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #dc3545;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+  }
+
+  .logout-button:hover {
+    background-color: #b52a37;
+  }
+
+
+  /* =========================================
+   4. HERO SECTION
+   Mengatur banner utama pada halaman Home.
+  ========================================= */
+
+  .hero-section {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 420px;
+    margin-bottom: 40px;
+    padding: 40px;
+
+    overflow: hidden;
+    border-radius: 12px;
+
+    background-size: cover;
+    background-position: center 35%;
+    background-repeat: no-repeat;
+  }
+
+  /* Lapisan gelap agar teks mudah dibaca */
+  .hero-section::before {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.65) 35%,
+      rgba(0, 0, 0, 0.15) 75%,
+      rgba(0, 0, 0, 0.05) 100%
+    );
+  }
+
+  /* Konten di atas lapisan background */
+  .hero-overlay {
+    position: relative;
+    z-index: 1;
+
+    max-width: 480px;
+    color: white;
+  }
+
+  /* Logo judul film */
+  .hero-title-logo {
+    display: block;
+
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 28px;
+
+    object-fit: contain;
+    object-position: left center;
+  }
+
+  /* Judul dan deskripsi Hero */
+  .hero-overlay h1 {
+    margin-bottom: 16px;
+    font-size: 40px;
+  }
+
+  .hero-overlay p {
+    margin-bottom: 24px;
+
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Kelompok tombol pada Hero */
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Gaya dasar tombol Hero */
+  .hero-button,
+  .hero-info-button {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  /* Tombol Mulai */
+  .hero-button {
+    background-color: white;
+    color: #111;
+  }
+
+  /* Tombol Informasi */
+  .hero-info-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+
+/* =========================================
+   5. LANJUT TONTON
+   Mengatur kartu film, informasi, dan progress.
+  ========================================= */
+
+  .continue-section {
+    margin: 30px 0;
+    padding: 0 24px;
+    color: white;
+  }
+
+  .continue-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+
+  /* Container untuk tombol panah */
+  .continue-container {
+    position: relative;
+    width: 100%;
+  }
+
+  /* Daftar film yang dapat digeser */
+  .continue-list {
+    display: flex;
+    gap: 24px;
+    padding: 4px 2px 12px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  /* Menyembunyikan scrollbar */
+  .continue-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Kartu film */
+  .continue-card {
+    display: flex;
+    flex: 0 0 280px;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  /* Poster film */
+  .continue-card img {
+    flex-shrink: 0;
+
+    width: 85px;
+    height: 125px;
+
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  /* Informasi film */
+  .continue-info {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .continue-info h3 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .continue-info p {
+    margin: 0 0 8px;
+    color: #d0d0d0;
+    font-size: 12px;
+  }
+
+  /* Progress bar tontonan */
+  .progress-bar {
+    width: 100%;
+    height: 6px;
+    margin-bottom: 8px;
+
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #444;
+  }
+
+  /* Indikator biru sesuai persentase tontonan */
+  .progress-value {
+    height: 100%;
+    border-radius: 10px;
+    background-color: #3457ff;
+    transition: width 0.3s ease;
+  }
+
+  /* Tombol Daftar Saya pada kartu */
+  .continue-info .my-list-button {
+    max-width: 100%;
+    padding: 7px 9px;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+/* =========================================
+   6. TOMBOL PANAH LANJUT TONTON
+   Menggeser daftar film ke kiri dan kanan.
+  ========================================= */
+
+  .continue-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba(20, 20, 20, 0.9);
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+
+    transform: translateY(-50%);
+  }
+
+  .continue-arrow:hover {
+    background-color: #3759f5;
+  }
+
+  /* Posisi tombol panah kiri */
+  .continue-prev {
+    left: -12px;
+  }
+
+  /* Posisi tombol panah kanan */
+  .continue-next {
+    right: -12px;
+  }
+
+/* =========================================
+   7. SECTION FILM
+   Mengatur Top Rating, Trending, dan Rilis Baru.
+========================================= */
+
+.trending-section {
+  position: relative;
+
+  margin: 35px 0;
+  padding: 0 24px;
+
+  overflow: hidden;
+}
+
+.trending-section h2 {
+  margin-bottom: 25px;
+
+  color: white;
+  font-size: 32px;
+}
+
+/* Container daftar film */
+.trending-wrapper {
+  position: relative;
+}
+
+/* Daftar film yang dapat digeser */
+.trending-list {
+  display: flex;
+  gap: 30px;
+
+  padding-bottom: 12px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Menyembunyikan scrollbar */
+.trending-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Kartu film */
+.trending-card {
+  flex: 0 0 315px;
+  min-width: 0;
+  color: white;
+}
+
+/* Poster film */
+.trending-poster {
+  position: relative;
+
+  width: 100%;
+  height: 435px;
+
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.trending-poster img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* Judul dan rating film */
+.trending-card h3 {
+  margin: 12px 0 8px;
+
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.movie-rating {
+  margin: 0;
+  color: #b0b0b0;
+  font-size: 16px;
+}
+
+/* Label tambahan pada poster */
+.movie-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Variasi warna label */
+.movie-badge.blue {
+  background-color: #3457ff;
+}
+
+.movie-badge.orange {
+  background-color: #ff5b45;
+}
+
+/* =========================================
+   8. TOMBOL PANAH SECTION FILM
+   Mengatur tombol carousel kategori film.
+  ========================================= */
+
+  .trending-arrow {
+    position: absolute;
+    top: 42%;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(55, 55, 55, 0.9);
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+
+    transform: translateY(-50%);
+  }
+
+  .trending-arrow:hover {
+    background: #3457ff;
+  }
+
+  /* Posisi tombol panah kiri */
+  .trending-prev {
+    left: -20px;
+  }
+
+  /* Posisi tombol panah kanan */
+  .trending-next {
+    right: -20px;
+  }
+
+/* =========================================
+   9. HASIL PENCARIAN
+   Mengatur tampilan film hasil pencarian.
+  ========================================= */
+
+  .search-results {
+    margin: 35px 24px;
+    color: white;
+  }
+
+  .search-results h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+
+  /* Susunan kartu film hasil pencarian */
+  .search-results .movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    align-items: start;
+  }
+
+/* =========================================
+   10. TOMBOL DAFTAR SAYA DAN HAPUS
+   Mengatur tombol simpan dan hapus film.
+  ========================================= */
+
+  .my-list-button,
+  .remove-list-button {
+    margin-top: 8px;
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+  }
+
+  /* Tombol tambah ke Daftar Saya */
+  .my-list-button {
+    border: 1px solid #555;
+    background-color: #2f3338;
+  }
+
+  .my-list-button:hover {
+    background-color: #41464d;
+  }
+
+  /* Tombol hapus dari Daftar Saya */
+  .remove-list-button {
+    border: none;
+    background-color: #8b2525;
+  }
+
+  .remove-list-button:hover {
+    background-color: #b83232;
+  }
+
+/* =========================================
+   11. DAFTAR SAYA
+   Mengatur jarak, kartu, dan poster film.
+  ========================================= */
+
+  /* Jarak section Daftar Saya */
+  #daftar-saya {
+    margin: 35px 24px;
+  }
+
+  /* Susunan kartu film */
+  #daftar-saya .movie-list {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
+  }
+
+  /* Tampilan kartu film */
+  #daftar-saya .movie-card {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+
+    border-radius: 10px;
+    background-color: #25282b;
+  }
+
+  /* Ukuran dan bentuk poster */
+  #daftar-saya .movie-card img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* Informasi film */
+  #daftar-saya .movie-card-info {
+    padding: 0 12px 12px;
+  }
+
+  /* Judul film */
+  #daftar-saya .movie-card-info h3 {
+    margin: 12px 0 6px;
+    font-size: 16px;
+  }
+
+  /* Tahun film */
+  #daftar-saya .movie-card-info p {
+    margin: 0 0 10px;
+    font-size: 14px;
+  }
+
+  /* =========================================
+   12. FOOTER
+   Mengatur kolom informasi di bagian bawah.
+  ========================================= */
+
+  .footer {
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr 1fr;
+    gap: 40px;
+
+    margin-top: 50px;
+    padding: 60px 5%;
+
+    color: #c1c2c4;
+    font-size: 14px;
+  }
+
+  /* Logo footer */
+  .footer-brand img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  /* Deskripsi brand */
+  .footer-brand p {
+    color: #9b9b9b;
+  }
+
+  /* Judul footer */
+  .footer h3 {
+    margin-bottom: 25px;
+
+    color: white;
+    font-size: 18px;
+  }
+
+  /* Daftar genre dan bantuan */
+  .genre-list,
+  .help-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  /* Susunan item genre dan bantuan */
+  .genre-list div,
+  .help-list div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Link footer */
+  .footer a {
+    color: #c1c2c4;
+    text-decoration: none;
+  }
+
+  /* Efek hover link */
+  .footer a:hover {
+    color: white;
+  }
+
+  /* =========================================
+   13. RESPONSIVE TABLET
+   Menyesuaikan layout pada layar tablet.
+  ========================================= */
+
+  /* Mengatur jumlah kolom Daftar Saya pada tablet */
+  @media (max-width: 1000px) {
+    #daftar-saya .movie-list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  /* Menyesuaikan footer pada layar lebih kecil */
+  @media (max-width: 768px) {
+    .footer {
+      grid-template-columns: 1fr;
+      gap: 35px;
+      padding: 40px 20px;
+    }
+
+    .footer-brand img {
+      width: 90px;
+    }
+
+    .footer h3 {
+      margin-bottom: 18px;
+    }
+
+    .genre-list,
+    .help-list {
+      gap: 20px;
+    }
+  }
+
+
+  /* =========================================
+   14. RESPONSIVE MOBILE
+   Menyesuaikan tampilan pada layar HP.
+  ========================================= */
+
+  @media (max-width: 600px) {
+    /* Hero */
+    .hero-section {
+      min-height: 350px;
+      background-position: center;
+    }
+
+    .hero-overlay {
+      padding: 20px;
+    }
+
+    .hero-overlay p {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .hero-title-logo {
+      max-width: 180px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+      gap: 8px;
+    }
+
+    /* Lanjut Tonton */
+    .continue-section {
+      margin: 25px 0;
+      padding: 0 16px;
+    }
+
+    .continue-section h2 {
+      margin-bottom: 16px;
+      font-size: 23px;
+    }
+
+    .continue-list {
+      gap: 16px;
+    }
+
+    .continue-card {
+      flex-basis: 250px;
+      gap: 10px;
+    }
+
+    .continue-card img {
+      width: 75px;
+      height: 110px;
+    }
+
+    .continue-info h3 {
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .continue-info p {
+      font-size: 11px;
+    }
+
+    .continue-arrow {
+      width: 32px;
+      height: 32px;
+      font-size: 17px;
+    }
+
+    .continue-prev {
+      left: -8px;
+    }
+
+    .continue-next {
+      right: -8px;
+    }
+
+    /* Section film */
+    .trending-section {
+      margin: 25px 0;
+      padding: 0 16px;
+    }
+
+    .trending-section h2 {
+      margin-bottom: 16px;
+      font-size: 23px;
+      line-height: 1.3;
+    }
+
+    .trending-list {
+      gap: 16px;
+    }
+
+    .trending-card {
+      flex-basis: 200px;
+    }
+
+    .trending-poster {
+      height: 280px;
+    }
+
+    .trending-card h3 {
+      margin: 8px 0 6px;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    .movie-rating {
+      font-size: 13px;
+    }
+
+    .movie-badge {
+      top: 10px;
+      left: 10px;
+      padding: 6px 9px;
+      font-size: 12px;
+    }
+
+    .trending-arrow {
+      width: 36px;
+      height: 36px;
+      font-size: 25px;
+    }
+
+    .trending-prev {
+      left: -10px;
+    }
+
+    .trending-next {
+      right: -10px;
+    }
+
+    /* Hasil pencarian */
+    .search-results {
+      margin: 25px 16px;
+    }
+
+    .search-results h2 {
+      font-size: 23px;
+    }
+
+    .search-results .movie-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    /* Daftar Saya */
+    #daftar-saya {
+      margin: 30px 16px;
+    }
+
+    #daftar-saya .movie-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    /* Navbar mobile */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+
+      width: 100%;
+      padding: 10px 16px;
+      box-sizing: border-box;
+
+      background-color: #141414;
+      overflow: visible;
+    }
+
+    .navbar-logo {
+      display: block;
+      flex-shrink: 0;
+
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    /* Tombol menu mobile */
+    .menu-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 36px;
+      height: 36px;
+      padding: 0;
+
+      border: none;
+      border-radius: 50%;
+      background-color: #292929;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 22px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    /* Panel menu mobile */
+    .navbar-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 12px;
+      right: 12px;
+      z-index: 1000;
+
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+
+      width: auto;
+      padding: 16px;
+      box-sizing: border-box;
+
+      background-color: #141414;
+      border: 1px solid #303030;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Menampilkan menu ketika tombol diklik */
+    .navbar-menu.menu-open {
+      display: flex;
+    }
+
+    /* Link navigasi */
+    .navbar-menu a {
+      display: block;
+      padding: 14px 12px;
+
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .navbar-menu a:hover {
+      color: #bcbcbc;
+      background-color: #222222;
+      border-radius: 8px;
+    }
+
+    /* Tombol logout */
+    .navbar-menu .logout-button {
+      align-self: stretch;
+      justify-content: center;
+      margin-top: 8px;
+      padding: 12px;
+    }
+  }
